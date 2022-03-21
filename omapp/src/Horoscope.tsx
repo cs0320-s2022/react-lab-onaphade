@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
-// @ts-ignore
 import TextBox from './TextBox';
 // @ts-ignore
-import { AwesomeButton } from 'react-awesome-button';
+import {AwesomeButton} from 'react-awesome-button';
 import "react-awesome-button/dist/styles.css";
-// @ts-ignore
 import axios from 'axios';
 
 function Horoscope() {
@@ -14,7 +12,6 @@ function Horoscope() {
     const [sun, setSun] = useState("");
     const [moon, setMoon] = useState("");
     const [rising, setRising] = useState("");
-
 
     interface MatchesRequestData {
         sun: string,
@@ -56,7 +53,8 @@ function Horoscope() {
     return (
         <div className="Horoscope">
             <header className="header">
-                Horosope:
+                Om's Horoscope:
+
             </header>
             <TextBox label={"Enter Sun Sign: "} change={setSun}/>
             <TextBox label={"Enter Moon Sign: "} change={setMoon}/>
@@ -64,15 +62,7 @@ function Horoscope() {
             <AwesomeButton onPress={requestHoroscope}
             >Submit</AwesomeButton>
             {horoscope.map(h => <li>{h}</li>)};
-        </div>
-    );
-}
-
-function TextBox(props: String) {
-    return <div>
-        <label> {props} </label>
-        <input type = "text"> </input>
-    </div>
+        </div>)
 }
 
 export default Horoscope;

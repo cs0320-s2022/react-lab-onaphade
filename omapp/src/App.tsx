@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TextBox from './TextBox';
 import Horoscope from './Horoscope';
 
 function App() {
